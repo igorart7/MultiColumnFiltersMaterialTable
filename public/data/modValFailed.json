@@ -1,0 +1,110 @@
+[
+    {
+        "id": "11f",
+        "maps": "38-M20",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 12:22:34",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1104_1217229559",
+        "extractBy": "jhernand",
+        "extractDateTime": "04/11/2024 12:18:28",
+        "errorLog": ""
+    },
+    {
+        "id": "22f",
+        "maps": "CHARLES_TS_A1-A2_BUS",
+        "partitionGroup": "Detail",
+        "builtDateTime": "30/10/2024 20:26:48",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1030_2024017950_adt",
+        "extractBy": "iartimen",
+        "extractDateTime": "30/10/2024 20:25:22",
+        "errorLog": ""
+    },
+    {
+        "id": "33f",
+        "maps": "VD-F4",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 00:19:46",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1104_0007535362_a",
+        "extractBy": "Automatic",
+        "extractDateTime": "04/11/2024 00:13:52",
+        "errorLog": ""
+    },
+    {
+        "id": "44f",
+        "maps": "E5-M10",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 00:19:46",
+        "builtStatus": "failed",
+        "builtSeverity": "I",
+        "extractId": "2024_1104_0007535362_a",
+        "extractBy": "Automatic",
+        "extractDateTime": "04/11/2024 00:13:52",
+        "errorLog": ""
+    },
+    {
+        "id": "55f",
+        "maps": "A1_BUS",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 00:19:46",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1104_0007535362_a",
+        "extractBy": "Automatic",
+        "extractDateTime": "04/11/2024 00:13:52",
+        "errorLog": ""
+    },
+    {
+        "id": "66f",
+        "maps": "A-203-BN",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 00:19:46",
+        "builtStatus": "failed",
+        "builtSeverity": "I",
+        "extractId": "2024_1104_0007535362_a",
+        "extractBy": "Automatic",
+        "extractDateTime": "04/11/2024 00:13:52",
+        "errorLog": ""
+    },
+    {
+        "id": "77f",
+        "maps": "VD-F2",
+        "partitionGroup": "Electric",
+        "builtDateTime": "04/11/2024 00:19:46",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1104_0007535362_a",
+        "extractBy": "Automatic",
+        "extractDateTime": "04/11/2024 00:13:52",
+        "errorLog": ""
+    },
+    {
+        "id": "88f",
+        "maps": "35-M11",
+        "partitionGroup": "SecondaryNetwork",
+        "builtDateTime": "31/10/2024 09:53:28",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1031_0947535030_sn",
+        "extractBy": "fakinsip",
+        "extractDateTime": "31/10/2024 09:50:40",
+        "errorLog": ""
+    },
+    {
+        "id": "99f",
+        "maps": "4118",
+        "partitionGroup": "SecondaryTile",
+        "builtDateTime": "31/10/2024 09:50:40",
+        "builtStatus": "failed",
+        "builtSeverity": "W",
+        "extractId": "2024_1030_2027108226_asb",
+        "extractBy": "Automatic",
+        "extractDateTime": "31/10/2024 09:48:19",
+        "errorLog": ""
+    }
+]
