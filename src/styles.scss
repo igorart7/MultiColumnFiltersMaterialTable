@@ -1,15 +1,21 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto Flex }
+html,
 
-.menu{
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto Flex;
+  overflow: hidden;
+}
+
+.menu {
   background-color: rgb(0, 93, 85) !important;
   justify-content: space-between;
   overflow-x: auto;
-  margin: 8px; 
+  margin: 8px;
 }
 
 .menu a:hover {
-  color: rgb(242,167,36) !important;
+  color: rgb(242, 167, 36) !important;
 }
 
 .menu a {
@@ -19,31 +25,52 @@ body { margin: 0; font-family: Roboto Flex }
   margin: 8px;
 }
 
+/* Wrapper to hold left and right columns */
 .wrapper {
   display: flex;
+  gap: 1em; /* Optional: Adds space between columns */
+  padding: 1em; /* Optional: Adds padding around the content */
+}
+
+/* Left Column: Controls and Table */
+.left-column {
+  flex: 10; /* Takes up 2/3 of the width */
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: auto;
 }
 
-.box a {
+/* Right Column: Submission Form */
+.submission-form {
   display: flex;
-  flex-direction: row;
-  
-}
-
-.table-with-form {
-  display: flex;
-  flex-direction: row;
-  
+  flex-direction: column;
+  flex: 2; /* Takes up 1/3 of the width */
+  max-height: 50vh; /* Optional: Limit the form's height if needed */
+  width: 100%; /* Optional: Set a minimum width */
+  overflow: auto; /* Enable scrolling if content overflows */
 }
 
 /* Table Container */
 .table-container {
-  table-layout: auto;
-  max-width: 100%;
-  overflow: scroll;
+  max-height: 60vh; /* Limits table height to 50% of viewport height */
+  overflow: auto; /* Adds scroll if table content exceeds max-height */
+  border-radius: 8px; /* Retain existing styles */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+/* Optional: Ensure controls don't grow excessively */
+.controls-container {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(
+    --mat-paginator-container-background-color,
+    var(--mat-app-surface)
+  );
+  vertical-align: left;
+  margin: 8px;
   border-radius: 8px;
-  max-height: 65%;
 }
 
 .mat-sort-header-content {
@@ -55,33 +82,57 @@ th {
   padding-right: 8px;
 }
 
-td { 
-  font-weight: 500; 
+td {
+  font-weight: 500;
   font-size: larger;
 }
 
 .success {
-  background: linear-gradient( to bottom, rgb(222, 245, 225) 0%,rgb(150, 199, 156) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(222, 245, 225) 0%,
+    rgb(150, 199, 156) 100%
+  ) !important;
 }
 
 .success:hover {
-  background: linear-gradient( to bottom, rgb(222, 245, 225) 0%,rgb(69, 131, 76) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(222, 245, 225) 0%,
+    rgb(69, 131, 76) 100%
+  ) !important;
 }
 
 .warning {
-  background: linear-gradient( to bottom, rgb(242, 226, 135) 0%,rgb(229, 192, 79) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(242, 226, 135) 0%,
+    rgb(229, 192, 79) 100%
+  ) !important;
 }
 
 .warning:hover {
-  background: linear-gradient( to bottom, rgb(242, 226, 135) 0%,rgb(172, 143, 57) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(242, 226, 135) 0%,
+    rgb(172, 143, 57) 100%
+  ) !important;
 }
 
 .failed {
-  background: linear-gradient( to bottom, rgb(245, 198, 202) 0%,rgb(234, 152, 161) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(245, 198, 202) 0%,
+    rgb(234, 152, 161) 100%
+  ) !important;
 }
 
 .failed:hover {
-  background: linear-gradient( to bottom, rgb(245, 198, 202) 0%,rgb(163, 91, 99) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(245, 198, 202) 0%,
+    rgb(163, 91, 99) 100%
+  ) !important;
 }
 
 /* Centered Checkbox Divs */
@@ -108,17 +159,6 @@ td {
   width: 98%;
 }
 
-.controls-container {
-  display: flex;
-  flex: 0 1 auto;
-  justify-content: space-between;
-  align-items: baseline;
-  background-color: var(--mat-paginator-container-background-color, var(--mat-app-surface));
-  vertical-align: left;
-  margin: 8px;
-  border-radius:  8px; 
-}
-
 .container1 {
   display: grid;
 
@@ -126,6 +166,6 @@ td {
   grid-template-rows: 65% 33%;
 
   grid-template-areas:
-        "head head2 . side"
-        "main main2 . side";
+    "head head2 . side"
+    "main main2 . side";
 }

@@ -1,108 +1,138 @@
 <div class="wrapper">
-  <div class="table-with-form">
-    <div class="box a">
+  <div class="left-column">
+    <div class="controls-container">
+      <mat-radio-group formControlName="options">
+        <mat-radio-button
+          value="success"
+          checked="true"
+          (click)="retrieveData('success')"
+          >Success</mat-radio-button
+        >
+        <mat-radio-button value="failed" (click)="retrieveData('failed')"
+          >Failed</mat-radio-button
+        >
+      </mat-radio-group>
 
-      <div class="controls-container">
-  
-        <mat-radio-group formControlName="options">
-          <mat-radio-button value="success" checked=true (click)="retrieveData('success')">Success</mat-radio-button>
-          <mat-radio-button value="failed" (click)="retrieveData('failed')">Failed</mat-radio-button>
-        </mat-radio-group>
-      
-        <button class="mat-button" mat-raised-button color="primary" (click)="extractBuild()">
-          Extract & Build
-        </button>
-        <button class="mat-button" mat-raised-button color="primary" (click)="sendToDGO()">
-          Send to DGO
-        </button>
-        <button class="mat-button" mat-raised-button color="warn" (click)="deleteRequests()">
-          Delete
-        </button>
-      
-        <mat-paginator [pageSizeOptions]="[5, 10, 50, 100]" [pageSize]="100" showFirstLastButtons></mat-paginator>
-      
-      </div>
-      
-      <div class="table-container mat-elevation-z8" style="margin: 0.5em;">
-      
-        <table mat-table [dataSource]="dataSource" matSort>
-      
-          <!-- Checkbox Column -->
-          <ng-container matColumnDef="select">
-            <th mat-header-cell *matHeaderCellDef>
-              <div class="checkbox-container" style="text-align: center;">
-                Select All
-              </div>
-              <div class="checkbox-container">
-                <mat-checkbox (change)="$event ? selectAllToggle() : null"
-                  [checked]="selection.hasValue() && areAllSelected()"
-                  [indeterminate]="selection.hasValue() && !areAllSelected()">
-                </mat-checkbox>
-              </div>
-            </th>
-            <td mat-cell *matCellDef="let row" style="border-bottom-style: none;">
-              <div class="checkbox-container">
-                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-                  [checked]="selection.isSelected(row)">
-                </mat-checkbox>
-              </div>
-            </td>
-          </ng-container>
-      
-          <!-- Dynamic Columns -->
-          <ng-container *ngFor="let column of columnKeys" [matColumnDef]="column">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>
-              <div class="column-header-container">
-                <span style="white-space: pre-line">{{ displayedColumns[column] | titlecase }}</span>
-                <input matInput (keyup)="applyColumnFilter($event, column)" class="column-filter-input" />
-              </div>
-            </th>
-            <td mat-cell *matCellDef="let element" style="border-bottom-style: none;">{{ element[column] }}</td>
-          </ng-container>
-      
-          <!-- Header and Row Definitions -->
-          <tr mat-header-row *matHeaderRowDef="columnKeysWithSelect; sticky: true"></tr>
-          <tr mat-row *matRowDef="let row; columns: columnKeysWithSelect" [ngClass]="{
-                      'success': row.builtStatus === 'success',
-                      'warning': isEmpty( row.builtStatus ),
-                      'failed': row.builtStatus === 'failed'
-                    }">
-          </tr>
-        </table>
-      
-      </div>
-      
+      <button
+        class="mat-button"
+        mat-raised-button
+        color="primary"
+        (click)="extractBuild()"
+      >
+        Extract & Build
+      </button>
+      <button
+        class="mat-button"
+        mat-raised-button
+        color="primary"
+        (click)="sendToDGO()"
+      >
+        Send to DGO
+      </button>
+      <button
+        class="mat-button"
+        mat-raised-button
+        color="warn"
+        (click)="deleteRequests()"
+      >
+        Delete
+      </button>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 50, 100]"
+        [pageSize]="100"
+        showFirstLastButtons
+      ></mat-paginator>
     </div>
-    <div class="box b">
-      
-      <div class="table-container mat-elevation-z8" style="margin: 0.5em;">
-          <p>Send Maps to DGO</p>
-          <mat-form-field>
-            <mat-label>Reference #</mat-label>
-            <textarea matInput
-                      cdkAutosizeMinRows="1"
-                      cdkAutosizeMaxRows="5"></textarea>
-          </mat-form-field>
-          
-          <mat-form-field>
-            <mat-label>Proposed Project Number</mat-label>
-            <textarea matInput
-                      cdkAutosizeMinRows="1"
-                      cdkAutosizeMaxRows="5"></textarea>
-          </mat-form-field>
-  
-          <button class="mat-button" mat-raised-button color="primary" >
-            Clear
-          </button>        
-          <button class="mat-button" mat-raised-button color="primary" (click)="submitBuild()">
-            Submit
-          </button>
-      </div>
+
+    <div class="table-container mat-elevation-z8" style="margin: 0.5em">
+      <table mat-table [dataSource]="dataSource" matSort>
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <div class="checkbox-container" style="text-align: center">
+              Select All
+            </div>
+            <div class="checkbox-container">
+              <mat-checkbox
+                (change)="$event ? selectAllToggle() : null"
+                [checked]="selection.hasValue() && areAllSelected()"
+                [indeterminate]="selection.hasValue() && !areAllSelected()"
+              >
+              </mat-checkbox>
+            </div>
+          </th>
+          <td mat-cell *matCellDef="let row" style="border-bottom-style: none">
+            <div class="checkbox-container">
+              <mat-checkbox
+                (click)="$event.stopPropagation()"
+                (change)="$event ? selection.toggle(row) : null"
+                [checked]="selection.isSelected(row)"
+              >
+              </mat-checkbox>
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- Dynamic Columns -->
+        <ng-container *ngFor="let column of columnKeys" [matColumnDef]="column">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <div class="column-header-container">
+              <span style="white-space: pre-line">{{
+                displayedColumns[column] | titlecase
+              }}</span>
+              <input
+                matInput
+                (keyup)="applyColumnFilter($event, column)"
+                class="column-filter-input"
+              />
+            </div>
+          </th>
+          <td mat-cell *matCellDef="let element" style="border-bottom-style: none">
+            {{ element[column] }}
+          </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr
+          mat-header-row
+          *matHeaderRowDef="columnKeysWithSelect; sticky: true"
+        ></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: columnKeysWithSelect"
+          [ngClass]="{
+            success: row.builtStatus === 'success',
+            warning: isEmpty(row.builtStatus),
+            failed: row.builtStatus === 'failed'
+          }"
+        ></tr>
+      </table>
     </div>
   </div>
- 
-  <div class="box c">
-    Box C content
+
+  <div class="submission-form mat-elevation-z8" style="margin: 0.5em">
+    <p>Send Maps to DGO</p>
+    <mat-form-field>
+      <mat-label>Reference #</mat-label>
+      <textarea matInput ></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Proposed Project Number</mat-label>
+      <textarea matInput ></textarea>
+    </mat-form-field>
+
+    <div style="display: flex; flex-direction: row; gap: 1em;">
+      <button class="mat-button" mat-raised-button color="primary">Clear</button>
+      <button
+        class="mat-button"
+        mat-raised-button
+        color="primary"
+        (click)="submitBuild()"
+      >
+        Submit
+      </button>
+    </div>
   </div>
 </div>
-

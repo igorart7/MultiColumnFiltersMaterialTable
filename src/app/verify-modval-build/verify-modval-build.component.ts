@@ -64,6 +64,10 @@ export class VerifyModvalBuildComponent implements AfterViewInit, OnInit {
     });
   }
 
+  submitBuild() {
+    this.extractBuild();
+  }
+
   ngAfterViewInit() {
 
     this.dataSource.filterPredicate = (data: any, filter: string) => {
