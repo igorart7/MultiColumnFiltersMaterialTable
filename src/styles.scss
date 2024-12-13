@@ -48,10 +48,12 @@ body {
   max-height: 50vh; /* Optional: Limit the form's height if needed */
   width: 100%; /* Optional: Set a minimum width */
   overflow: auto; /* Enable scrolling if content overflows */
+  justify-content: center;
 }
 
 /* Table Container */
 .table-container {
+  table-layout: auto; 
   max-height: 60vh; /* Limits table height to 50% of viewport height */
   overflow: auto; /* Adds scroll if table content exceeds max-height */
   border-radius: 8px; /* Retain existing styles */
