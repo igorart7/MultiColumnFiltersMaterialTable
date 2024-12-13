@@ -48,7 +48,13 @@ body {
   max-height: 50vh; /* Optional: Limit the form's height if needed */
   width: 100%; /* Optional: Set a minimum width */
   overflow: auto; /* Enable scrolling if content overflows */
+}
+
+.submission-buttons {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  gap: 1em;
 }
 
 /* Table Container */
