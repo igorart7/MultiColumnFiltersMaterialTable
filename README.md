@@ -1,6 +1,19 @@
-# Mmt
+# MMT
+This project represents a complete application. It includes multiple features:
+1. Login and Logout pages.
+2. Menu with multiple screens.
+3. Multi column filters for mat tables.
+4. Dialog boxes with dynamic populated information.
+5. Material UI look and feel, utilizing Material Design from Google.
+6. Responsive Design.
+7. RESTful Web Services calls. 
+8. Observable pattern implementations.
+9. Angular Signals.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+The project Angular version 19 and Material UI look and feel.
+
+
+The project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
 
 ## Development server
 
