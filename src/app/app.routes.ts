@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { ManualExtractComponent } from './manual-extract/manual-extract.component';
 import { ExtractRequestComponent } from './extract-request/extract-request.component';
 import { VerifyModvalBuildComponent } from './verify-modval-build/verify-modval-build.component';
 import { PromoteToProductionComponent } from './promote-to-production/promote-to-production.component';
@@ -9,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     { path:  '', pathMatch: 'full', redirectTo: 'login' },
-    { path:  'manual-extract', component:  ManualExtractComponent },
     { path:  'extractRequest', component: ExtractRequestComponent },
     { path:  'verifyModvalBuild', component: VerifyModvalBuildComponent },
     { path:  'promoteToProduction', component: PromoteToProductionComponent },
