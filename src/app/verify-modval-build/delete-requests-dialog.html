@@ -1,0 +1,13 @@
+<h2 mat-dialog-title align="center">Delete requests confirmation</h2>
+<mat-dialog-content class="mat-typography">
+
+  <p>You're going to delete the following maps.</p> 
+  <h3>{{data}}</h3>
+
+  <p>Click <b>Confirm</b> button if you want to proceed. Otherwise, click <b>Cancel</b>.</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button mat-raised-button (click)="onNoClick()" mat-dialog-close>Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="confirmSubmit()" cdkFocusInitial >Confirm</button>
+</mat-dialog-actions>

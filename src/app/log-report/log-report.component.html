@@ -1,1 +1,76 @@
-<p>log-report works!</p>
+<div class="modvalBuildContainer">
+    <div class="wrapper">
+    
+      <div class="left-column">
+    
+        <div class="controls-container">
+    
+          <mat-paginator #promoteToProdPaginator [pageSizeOptions]="[10, 100]" [pageSize]="10" showFirstLastButtons>        
+          </mat-paginator>
+    
+        </div>
+    
+        <div class="table-container mat-elevation-z8">
+    
+          <table mat-table [dataSource]="dataSource" #mainTableSort="matSort" matSort>
+    
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+    
+              <th mat-header-cell *matHeaderCellDef>
+                <div class="checkbox-container" style="text-align: center">
+                  Select All
+                </div>
+                <div class="checkbox-container">
+                  <mat-checkbox 
+                    (change)="$event ? selectAllToggle() : null"
+                    [checked]="selection.hasValue() && areAllSelected()"
+                    [indeterminate]="selection.hasValue() && !areAllSelected()"
+                  >
+                  </mat-checkbox>
+                </div>
+              </th>
+              
+              <td mat-cell *matCellDef="let row" style="border-bottom-style: none">
+    
+                <div class="checkbox-container">
+                  <mat-checkbox
+                    (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)"
+                    *ngIf="row.builtStatus">
+                  </mat-checkbox>
+    
+                </div>
+              </td>
+            </ng-container>
+    
+            <!-- Dynamic Columns -->
+            <ng-container *ngFor="let column of columnKeys" [matColumnDef]="column">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <div class="column-header-container">
+                  <span style="white-space: pre-line">{{ displayedColumns[column] | titlecase }}</span>
+                  <input matInput (keyup)="applyColumnFilter($event, column)" class="column-filter-input"/>
+                </div>
+              </th>
+              <td mat-cell *matCellDef="let element" style="border-bottom-style: none">
+                {{ element[column] }}
+              </td>
+            </ng-container>
+    
+            <!-- Header and Row Definitions -->
+            <tr mat-header-row *matHeaderRowDef="columnKeysWithSelect; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnKeysWithSelect"
+              [ngClass]="{
+                success: ( row.modValBuiltStatus === 'success' && row.prdBuiltStatus === 'success' ),
+                warning: ( isEmpty(row.modValBuiltStatus) || isEmpty(row.prdBuiltStatus) ),
+                failed: ( row.modValBuiltStatus === 'failed' || row.prdBuiltStatus === 'failed' )
+              }">
+            </tr>
+          </table>
+        </div>
+      </div>
+    
+    </div>
+        
+</div>

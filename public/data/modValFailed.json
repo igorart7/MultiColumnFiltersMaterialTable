@@ -9,7 +9,7 @@
         "extractId": "2024_1104_1217229559",
         "extractBy": "jhernand",
         "extractDateTime": "04/11/2024 12:18:28",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "22f",
@@ -21,7 +21,7 @@
         "extractId": "2024_1030_2024017950_adt",
         "extractBy": "iartimen",
         "extractDateTime": "30/10/2024 20:25:22",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "33f",
@@ -33,7 +33,7 @@
         "extractId": "2024_1104_0007535362_a",
         "extractBy": "Automatic",
         "extractDateTime": "04/11/2024 00:13:52",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "44f",
@@ -45,7 +45,7 @@
         "extractId": "2024_1104_0007535362_a",
         "extractBy": "Automatic",
         "extractDateTime": "04/11/2024 00:13:52",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "55f",
@@ -57,7 +57,7 @@
         "extractId": "2024_1104_0007535362_a",
         "extractBy": "Automatic",
         "extractDateTime": "04/11/2024 00:13:52",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "66f",
@@ -69,7 +69,7 @@
         "extractId": "2024_1104_0007535362_a",
         "extractBy": "Automatic",
         "extractDateTime": "04/11/2024 00:13:52",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "77f",
@@ -81,7 +81,7 @@
         "extractId": "2024_1104_0007535362_a",
         "extractBy": "Automatic",
         "extractDateTime": "04/11/2024 00:13:52",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "88f",
@@ -93,7 +93,7 @@
         "extractId": "2024_1031_0947535030_sn",
         "extractBy": "fakinsip",
         "extractDateTime": "31/10/2024 09:50:40",
-        "errorLog": ""
+        "errorLog": "Error"
     },
     {
         "id": "99f",
@@ -105,6 +105,6 @@
         "extractId": "2024_1030_2027108226_asb",
         "extractBy": "Automatic",
         "extractDateTime": "31/10/2024 09:48:19",
-        "errorLog": ""
+        "errorLog": "Error"
     }
 ]

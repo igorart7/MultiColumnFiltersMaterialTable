@@ -1,3 +1,5 @@
+@import '@angular/material/prebuilt-themes/azure-blue.css';
+
 html,
 
 body {
@@ -11,7 +13,7 @@ body {
   background-color: rgb(0, 93, 85) !important;
   justify-content: space-between;
   overflow-x: auto;
-  margin: 8px;
+  height: var(--mat-toolbar-standard-height, 48px) !important;
 }
 
 .menu a:hover {
@@ -22,19 +24,31 @@ body {
   color: white !important;
   font-weight: 500;
   font-size: 1rem;
-  margin: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.modvalBuildContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 /* Wrapper to hold left and right columns */
 .wrapper {
   display: flex;
-  gap: 1em; /* Optional: Adds space between columns */
-  padding: 1em; /* Optional: Adds padding around the content */
+  gap: 0.5em;
+  padding: 0.5em;
+  max-height: 75vh;
+  flex-direction: row;
 }
 
 /* Left Column: Controls and Table */
 .left-column {
-  flex: 10; /* Takes up 2/3 of the width */
+  flex: 10;
+  /* Takes up 5/6 of the screen width */
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -42,28 +56,39 @@ body {
 
 /* Right Column: Submission Form */
 .submission-form {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  flex: 2; /* Takes up 1/3 of the width */
-  max-height: 50vh; /* Optional: Limit the form's height if needed */
-  width: 100%; /* Optional: Set a minimum width */
-  overflow: auto; /* Enable scrolling if content overflows */
+  justify-content: space-between;
+  /* Enable scrolling if content overflows */
 }
 
 .submission-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 1em;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.submissionFormControls {
+  min-height: 30%;
+  mat-form-field {
+    display: flex;
+  }
+}
+
+.selectedIssueList{
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Table Container */
 .table-container {
-  table-layout: auto; 
-  max-height: 60vh; /* Limits table height to 50% of viewport height */
-  overflow: auto; /* Adds scroll if table content exceeds max-height */
-  border-radius: 8px; /* Retain existing styles */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  table-layout: auto;
+  border-radius: 8px;
+  /* Retain existing styles */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Optional: Ensure controls don't grow excessively */
@@ -72,10 +97,7 @@ body {
   flex: 0 1 auto;
   justify-content: space-between;
   align-items: baseline;
-  background-color: var(
-    --mat-paginator-container-background-color,
-    var(--mat-app-surface)
-  );
+  background-color: var(--mat-paginator-container-background-color, var(--mat-app-surface));
   vertical-align: left;
   margin: 8px;
   border-radius: 8px;
@@ -85,62 +107,33 @@ body {
   text-align: left;
 }
 
-th {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 td {
   font-weight: 500;
   font-size: larger;
 }
 
 .success {
-  background: linear-gradient(
-    to bottom,
-    rgb(222, 245, 225) 0%,
-    rgb(150, 199, 156) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(222, 245, 225) 0%, rgb(150, 199, 156) 100%) !important;
 }
 
 .success:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(222, 245, 225) 0%,
-    rgb(69, 131, 76) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(222, 245, 225) 0%, rgb(69, 131, 76) 100%) !important;
 }
 
 .warning {
-  background: linear-gradient(
-    to bottom,
-    rgb(242, 226, 135) 0%,
-    rgb(229, 192, 79) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(242, 226, 135) 0%, rgb(229, 192, 79) 100%) !important;
 }
 
 .warning:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(242, 226, 135) 0%,
-    rgb(172, 143, 57) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(242, 226, 135) 0%, rgb(172, 143, 57) 100%) !important;
 }
 
 .failed {
-  background: linear-gradient(
-    to bottom,
-    rgb(245, 198, 202) 0%,
-    rgb(234, 152, 161) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(245, 198, 202) 0%, rgb(234, 152, 161) 100%) !important;
 }
 
 .failed:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(245, 198, 202) 0%,
-    rgb(163, 91, 99) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgb(245, 198, 202) 0%, rgb(163, 91, 99) 100%) !important;
 }
 
 /* Centered Checkbox Divs */
@@ -158,22 +151,7 @@ td {
   justify-content: space-between;
 }
 
-.mat-sort-header-content {
-  text-align: left;
-}
-
 /* Input Filter Style */
 .column-filter-input {
   width: 98%;
-}
-
-.container1 {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 65% 33%;
-
-  grid-template-areas:
-    "head head2 . side"
-    "main main2 . side";
 }
