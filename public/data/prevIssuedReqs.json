@@ -4,7 +4,7 @@
         "maps": "38-M20",
         "referenceNumber": "Ref11",
         "proposedProjectNumber": "PPN 1",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -14,17 +14,17 @@
         "maps": "VD-F4_1",
         "referenceNumber": "Ref12",
         "proposedProjectNumber": "PPN 2",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Build Requested",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "SecondaryNetwork"
+        "partitionGroup": "SN"
     },
     {
         "id": "13",
         "maps": "E5-M10",
         "referenceNumber": "Ref13",
         "proposedProjectNumber": "PPN 3",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -34,17 +34,17 @@
         "maps": "A1_BUS",
         "referenceNumber": "Ref14",
         "proposedProjectNumber": "PPN 4",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     },
     {
         "id": "15",
         "maps": "A-203-BN",
         "referenceNumber": "Ref15",
         "proposedProjectNumber": "PPN 5",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "Build Requested",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -54,17 +54,17 @@
         "maps": "VD-F2",
         "referenceNumber": "Ref16",
         "proposedProjectNumber": "PPN 6",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Delete",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "SecondaryNetwork"
+        "partitionGroup": "SN"
     },
     {
         "id": "17",
         "maps": "35-M11",
         "referenceNumber": "Ref17",
         "proposedProjectNumber": "PPN 7",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -74,37 +74,37 @@
         "maps": "4118",
         "referenceNumber": "Ref18",
         "proposedProjectNumber": "PPN 8",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     },
     {
         "id": "19",
         "maps": "A1_BUS",
         "referenceNumber": "Ref19",
         "proposedProjectNumber": "PPN 9",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
     },
     {
         "id": "20",
-        "maps": "CHARLES_TS_A1-A2_BUS",
+        "maps": "CH_A1-A2_B",
         "referenceNumber": "Ref20",
         "proposedProjectNumber": "PPN 20",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     },
     {
         "id": "11",
         "maps": "38-M20",
         "referenceNumber": "Ref11",
         "proposedProjectNumber": "PPN 1",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -114,17 +114,17 @@
         "maps": "VD-F4_1",
         "referenceNumber": "Ref12",
         "proposedProjectNumber": "PPN 2",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Build Requested",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "SecondaryNetwork"
+        "partitionGroup": "SN"
     },
     {
         "id": "13",
         "maps": "E5-M10",
         "referenceNumber": "Ref13",
         "proposedProjectNumber": "PPN 3",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -134,17 +134,17 @@
         "maps": "A1_BUS",
         "referenceNumber": "Ref14",
         "proposedProjectNumber": "PPN 4",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     },
     {
         "id": "15",
         "maps": "A-203-BN",
         "referenceNumber": "Ref15",
         "proposedProjectNumber": "PPN 5",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "Build Requested",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -154,17 +154,17 @@
         "maps": "VD-F2",
         "referenceNumber": "Ref16",
         "proposedProjectNumber": "PPN 6",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Delete",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "SecondaryNetwork"
+        "partitionGroup": "SN"
     },
     {
         "id": "17",
         "maps": "35-M11",
         "referenceNumber": "Ref17",
         "proposedProjectNumber": "PPN 7",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
@@ -174,29 +174,29 @@
         "maps": "4118",
         "referenceNumber": "Ref18",
         "proposedProjectNumber": "PPN 8",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     },
     {
         "id": "19",
         "maps": "A1_BUS",
         "referenceNumber": "Ref19",
         "proposedProjectNumber": "PPN 9",
-        "userId": "jhernand",
+        "userId": "user2",
         "action": "",
         "extractDateTime": "04/11/2024 12:18:28",
         "partitionGroup": "Detail"
     },
     {
         "id": "20",
-        "maps": "CHARLES_TS_A1-A2_BUS",
+        "maps": "CH_A1-A2_B",
         "referenceNumber": "Ref20",
         "proposedProjectNumber": "PPN 20",
-        "userId": "iartimen",
+        "userId": "user1",
         "action": "Promote to DGO",
         "extractDateTime": "04/11/2024 12:18:28",
-        "partitionGroup": "Electric"
+        "partitionGroup": "EL"
     }
 ]    

@@ -11,7 +11,7 @@ export class AuthenticationService {
 
   login( userName: string, password: string): Observable<boolean> {
 
-    let properUserName: string = 'igor';
+    let properUserName: string = 'user1';
     let properPassword: string = 'ppp';
 
     if( properUserName === userName && properPassword === password ){
